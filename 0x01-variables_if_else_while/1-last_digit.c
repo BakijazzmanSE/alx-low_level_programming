@@ -25,7 +25,12 @@ int main(void)
 	}
 	else if (modulo > 5)
 	{
-		printf()
+		printf("Last digit of %d is %d and is greater than 5\n", n, modulo);
 	}
+	else
+	{
+		printf("Last digit of %d is %d and is zero\n", n, modulo);
+	}
+
 	return (0);
 }
