@@ -21,7 +21,7 @@ int main(void)
 	modulo = n % 10;
 	if ((modulo != 0) && (modulo < 6))
 	{
-		printf("Last digit of %d is %d and is less than 6 and not 0 \n", n, modulo);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, modulo);
 	}
 	else if (modulo > 5)
 	{
@@ -29,7 +29,7 @@ int main(void)
 	}
 	else
 	{
-		printf("Last digit of %d is %d and is zero\n", n, modulo);
+		printf("Last digit of %d is %d and is 0\n", n, modulo);
 	}
 
 	return (0);
