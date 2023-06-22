@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * more_numbers -- function thta prints 10x the numbers 0-14
- * Return: voi 
+ * Return: void
  */
 void more_numbers(void)
 {
