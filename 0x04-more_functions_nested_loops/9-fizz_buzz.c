@@ -30,6 +30,7 @@ int main(void)
 			printf("%i ", num1);
 		}
 	}
+	printf("\n");
 
 	return (0);
 }
