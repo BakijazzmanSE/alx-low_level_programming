@@ -21,13 +21,13 @@ void print_diagonal(int n)
 			for (col = 1; col <= n; col++)
 			{
 				if (row == col)
-				
+
 					_putchar('\\');
-				
+
 				else if (col < row)
-				
+
 					_putchar(' ');
-				
+
 			}
 			_putchar('\n');
 		}
