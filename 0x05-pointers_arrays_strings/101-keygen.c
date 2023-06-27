@@ -1,34 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h>
-
-#define MIN_LENGTH 8
-#define MAX_LENGTH 12
-
-char* generate_password() 
+/**
+ * main - program that generates random valid
+ * passwords for the program 101-crackme
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
 {
-    int i;
-    char* password = malloc(MAX_LENGTH + 1);
-    int password_length = rand() % (MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
-    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	int pass[100];
+	int i, sum, n;
 
-    srand(time(NULL));
-  
-    for (i = 0; i < password_length; i++)
-    {
-        int index = rand() % strlen(charset);
-      
-        password[i] = charset[index];
-    }
-    password[password_length] = '\0';
-    return password;
-}
+	sum = 0;
 
+	srand(time(NULL));
 
-int main() {
-    char* password = generate_password();
-    printf("%s\n", password);
-    free(password);
-    return 0;
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
+	
+	return (0);
 }
