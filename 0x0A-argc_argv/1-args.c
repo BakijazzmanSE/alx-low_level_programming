@@ -1,17 +1,13 @@
 #include <stdio.h>
 /**
- * main - prints the arguements it reccieves
+ * main - prints the number of arguement passed into it
  * @argc: count
  * @argv: value
  * Return: success
  */
 int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s\n", argv[i]);
-	}
-	return(0);
+	(void)argv;
+	printf("%d\n", argc);
+	return (0);
 }
