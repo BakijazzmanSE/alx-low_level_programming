@@ -1,24 +1,30 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * _strchr - function that locates a character in a string.
- *
- * @s: string to receive and return
- * @c: character to receive
- * Return: char
+ * _strspn - function that gets the length of a prefix substring
+ * @s: string to search
+ * @accept: target
+ * Return: number of bytes
  */
-
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
+	int i = 0;
+	int j = 0;
+	int target;
+
 	while (*s != '\0')
 	{
-		if (*s == c)
-			return (s);
+		target = 0;
+		while (*(accept + j) != '\0')
+		{
+			if (*s == *(accept + j))
+				target = 1;
+			j++;
+		}
+		j = 0;
+		if (target == 0)
+			break;
+		i++;
 		s++;
 	}
-	if (*s == c)
-		return (s);
-	else
-		return (NULL);
+	return (i);
 }
