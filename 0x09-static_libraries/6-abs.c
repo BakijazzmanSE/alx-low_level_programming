@@ -4,12 +4,12 @@
  * Return: 0 success
  * @num: the absolute value
  */
-int _abs(int num)
+int _abs(int n)
 {
-	if (num > 0)
+	if (n > 0)
 	{
-		return (num);
+		return (n);
 	}
 
-	return (-num);
+	return (-n);
 }
