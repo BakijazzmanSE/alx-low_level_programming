@@ -1,5 +1,5 @@
 #include "function_pointers.h"
-#include <stdio>
+#include <stdio.h>
 /**
  * int_index - function that executes a functiongiven as a parameter
  * @size: the size of the array
@@ -11,7 +11,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	 unsigned int i = 0;
 
-	 if (action && array)
+	 if (acion && array)
 	 while (i < size)
 	 {
 	 	action(array[i]);
